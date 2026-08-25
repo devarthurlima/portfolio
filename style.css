@@ -2,14 +2,14 @@
    VARIÁVEIS DE COR — modo escuro (fundo preto/cinza)
    ===================================================== */
 :root {
-  --bg: #0b0b0d;           /* fundo principal, quase preto */
-  --bg-card: #161619;      /* fundo dos cards */
-  --border: #2a2a2e;       /* borda fina e suave dos cards */
-  --text: #f2f2f3;         /* texto principal (branco) */
-  --text-muted: #a3a3a8;   /* texto secundário (cinza claro) */
-  --pill-bg: #1f1f23;      /* fundo das tags em pílula */
-  --radius-lg: 16px;       /* cantos arredondados dos cards */
-  --radius-full: 999px;    /* cantos totalmente arredondados (botões/pílulas) */
+  --bg: #0b0b0d; /* fundo principal, quase preto */
+  --bg-card: #161619; /* fundo dos cards */
+  --border: #2a2a2e; /* borda fina e suave dos cards */
+  --text: #f2f2f3; /* texto principal (branco) */
+  --text-muted: #a3a3a8; /* texto secundário (cinza claro) */
+  --pill-bg: #1f1f23; /* fundo das tags em pílula */
+  --radius-lg: 16px; /* cantos arredondados dos cards */
+  --radius-full: 999px; /* cantos totalmente arredondados (botões/pílulas) */
 }
 
 /* =====================================================
@@ -19,6 +19,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Rolagem suave ao clicar nos links da navbar */
 }
 
 body {
@@ -44,7 +48,7 @@ ul {
 }
 
 /* =====================================================
-   BOTÕES (cantos arredondados
+   BOTÕES (cantos arredondados)
    ===================================================== */
 .btn {
   display: inline-block;
@@ -52,11 +56,12 @@ ul {
   border-radius: var(--radius-full);
   font-size: 0.95rem;
   font-weight: 600;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn:hover {
-  opacity: 0.85;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
 }
 
 .btn-solid {
@@ -64,10 +69,18 @@ ul {
   color: var(--bg);
 }
 
+.btn-solid:hover {
+  opacity: 0.9;
+}
+
 .btn-outline {
   background: var(--bg-card);
   border: 1px solid var(--border);
   color: var(--text);
+}
+
+.btn-outline:hover {
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* =====================================================
@@ -102,6 +115,12 @@ ul {
   font-size: 0.8rem;
   font-weight: 700;
   flex-shrink: 0;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.logo-badge:hover {
+  transform: scale(1.08);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .nav {
@@ -114,6 +133,7 @@ ul {
 .nav a {
   color: var(--text-muted);
   font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
 .nav a:hover {
@@ -179,10 +199,13 @@ ul {
   align-items: center;
   justify-content: center;
   color: var(--text);
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .icon-circle:hover {
-  border-color: var(--text-muted);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.4);
+  background: #1f1f24;
 }
 
 /* Avatar / foto de perfil */
@@ -195,19 +218,24 @@ ul {
   border: 1px solid var(--border);
   flex-shrink: 0;
   position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.hero-avatar:hover {
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .hero-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .avatar-placeholder {
   position: absolute;
   inset: 0;
-  display: none; /* aparece automaticamente se a foto não carregar */
+  display: none;
   align-items: center;
   justify-content: center;
   color: var(--text-muted);
@@ -252,6 +280,13 @@ ul {
   padding: 20px;
   text-align: left;
   font-weight: 500;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.approach-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .approach-number {
@@ -279,6 +314,13 @@ ul {
   border-radius: var(--radius-lg);
   padding: 24px;
   text-align: left;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 .skill-card h3 {
@@ -300,6 +342,13 @@ ul {
   padding: 6px 14px;
   font-size: 0.82rem;
   color: var(--text-muted);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.pill:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--text);
 }
 
 /* =====================================================
@@ -313,13 +362,20 @@ ul {
 
 .project-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 24px;
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .project-card h3 {
@@ -335,10 +391,13 @@ ul {
   margin-top: auto;
   font-size: 0.9rem;
   font-weight: 600;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .project-link:hover {
-  text-decoration: underline;
+  transform: translateX(4px);
+  color: #ffffff;
 }
 
 /* =====================================================
