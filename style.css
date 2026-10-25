@@ -1,20 +1,14 @@
-/* =====================================================
-   VARIÁVEIS DE COR — modo escuro (fundo preto/cinza)
-   ===================================================== */
 :root {
-  --bg: #0b0b0d; /* fundo principal, quase preto */
-  --bg-card: #161619; /* fundo dos cards */
-  --border: #2a2a2e; /* borda fina e suave dos cards */
-  --text: #f2f2f3; /* texto principal (branco) */
-  --text-muted: #a3a3a8; /* texto secundário (cinza claro) */
-  --pill-bg: #1f1f23; /* fundo das tags em pílula */
-  --radius-lg: 16px; /* cantos arredondados dos cards */
-  --radius-full: 999px; /* cantos totalmente arredondados (botões/pílulas) */
+  --bg: #0b0b0d;
+  --bg-card: #161619;
+  --border: #2a2a2e;
+  --text: #f2f2f3;
+  --text-muted: #a3a3a8;
+  --pill-bg: #1f1f23;
+  --radius-lg: 16px;
+  --radius-full: 999px;
 }
 
-/* =====================================================
-   RESET BÁSICO
-   ===================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +16,11 @@
 }
 
 html {
-  scroll-behavior: smooth; /* Rolagem suave ao clicar nos links da navbar */
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 90px;
 }
 
 body {
@@ -47,16 +45,17 @@ ul {
   padding: 0 24px;
 }
 
-/* =====================================================
-   BOTÕES (cantos arredondados)
-   ===================================================== */
 .btn {
   display: inline-block;
   padding: 12px 28px;
   border-radius: var(--radius-full);
   font-size: 0.95rem;
   font-weight: 600;
-  transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn:hover {
@@ -83,9 +82,6 @@ ul {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* =====================================================
-   HEADER / NAVBAR
-   ===================================================== */
 .header {
   position: sticky;
   top: 0;
@@ -115,7 +111,9 @@ ul {
   font-size: 0.8rem;
   font-weight: 700;
   flex-shrink: 0;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .logo-badge:hover {
@@ -146,9 +144,6 @@ ul {
   flex-shrink: 0;
 }
 
-/* =====================================================
-   HERO / INTRODUÇÃO
-   ===================================================== */
 .hero {
   display: flex;
   align-items: center;
@@ -199,7 +194,10 @@ ul {
   align-items: center;
   justify-content: center;
   color: var(--text);
-  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .icon-circle:hover {
@@ -208,11 +206,10 @@ ul {
   background: #1f1f24;
 }
 
-/* Avatar / foto de perfil */
 .hero-avatar {
-  width: 260px;
-  height: 260px;
-  border-radius: var(--radius-lg);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
   overflow: hidden;
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -241,9 +238,6 @@ ul {
   color: var(--text-muted);
 }
 
-/* =====================================================
-   SEÇÕES GERAIS
-   ===================================================== */
 .section {
   padding: 70px 24px;
   border-top: 1px solid var(--border);
@@ -261,9 +255,6 @@ ul {
   margin: 0 auto 40px;
 }
 
-/* =====================================================
-   SOBRE MIM / CARDS DE ABORDAGEM
-   ===================================================== */
 .approach-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -280,7 +271,10 @@ ul {
   padding: 20px;
   text-align: left;
   font-weight: 500;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .approach-card:hover {
@@ -299,9 +293,6 @@ ul {
   flex-shrink: 0;
 }
 
-/* =====================================================
-   HABILIDADES
-   ===================================================== */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -314,7 +305,10 @@ ul {
   border-radius: var(--radius-lg);
   padding: 24px;
   text-align: left;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .skill-card:hover {
@@ -328,7 +322,6 @@ ul {
   font-size: 1.1rem;
 }
 
-/* Tags em formato de pílula */
 .pill-group {
   display: flex;
   flex-wrap: wrap;
@@ -342,7 +335,10 @@ ul {
   padding: 6px 14px;
   font-size: 0.82rem;
   color: var(--text-muted);
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .pill:hover {
@@ -351,9 +347,94 @@ ul {
   color: var(--text);
 }
 
-/* =====================================================
-   PROJETOS
-   ===================================================== */
+.timeline {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 28px;
+  text-align: left;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--border);
+}
+
+.experience-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.experience-card:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 30px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--text);
+  border: 3px solid var(--bg);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.experience-header h3 {
+  font-size: 1.2rem;
+}
+
+.experience-company {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.experience-list li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--text-muted);
+  font-size: 0.93rem;
+}
+
+.experience-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -369,7 +450,10 @@ ul {
   flex-direction: column;
   gap: 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .project-card:hover {
@@ -387,12 +471,24 @@ ul {
   font-size: 0.92rem;
 }
 
+.project-card .project-highlight {
+  font-size: 0.88rem;
+  border-left: 2px solid var(--border);
+  padding-left: 12px;
+}
+
+.project-highlight strong {
+  color: var(--text);
+}
+
 .project-link {
   margin-top: auto;
   font-size: 0.9rem;
   font-weight: 600;
   display: inline-block;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .project-link:hover {
@@ -400,9 +496,31 @@ ul {
   color: #ffffff;
 }
 
-/* =====================================================
-   CONTATO
-   ===================================================== */
+.project-links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-links .project-link {
+  margin-top: 0;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: var(--pill-bg);
+  font-size: 0.85rem;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.project-links .project-link:hover {
+  transform: none;
+  border-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
 .contact-links {
   display: flex;
   justify-content: center;
@@ -410,9 +528,6 @@ ul {
   gap: 14px;
 }
 
-/* =====================================================
-   RODAPÉ
-   ===================================================== */
 .footer {
   border-top: 1px solid var(--border);
   padding: 28px 24px;
@@ -421,9 +536,6 @@ ul {
   font-size: 0.85rem;
 }
 
-/* =====================================================
-   RESPONSIVIDADE — CELULAR
-   ===================================================== */
 @media (max-width: 720px) {
   .header-inner {
     flex-wrap: wrap;
@@ -463,5 +575,13 @@ ul {
 
   .hero-text h1 {
     font-size: 2rem;
+  }
+
+  .timeline {
+    padding-left: 22px;
+  }
+
+  .experience-card::before {
+    left: -22px;
   }
 }
