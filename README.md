@@ -17,9 +17,9 @@ Este é o repositório do meu portfólio web pessoal, desenvolvido para apresent
 
 Alguns dos projetos apresentados no portfólio:
 
-1. **Blog TecnoLógica:** Blog sobre atualidades no mundo tecnológico construído com HTML5 e CSS3.
-2. **Jogo da Forca:** Aplicação desenvolvida em Python com interface gráfica (Tkinter) e persistência de dados em SQLite3.
-3. **Python PowerUp:** Automação de processos (RPA) em Python utilizando PyAutoGUI e Pandas para cadastro de produtos em lote.
+1. **Automação RPA para Cadastro de Produtos:** Automação de processos (RPA) em Python utilizando PyAutoGUI e Pandas para cadastro de produtos em lote a partir de arquivos CSV.
+2. **Análise de Cancelamento de Clientes (Churn):** Análise de dados em Python com Pandas e Plotly Express para identificar padrões e causas de cancelamento de clientes.
+3. **Hero Landing Page:** Landing page moderna e responsiva construída com HTML5 e CSS3, com foco em UI/UX, semântica e acessibilidade.
 
 ---
 
